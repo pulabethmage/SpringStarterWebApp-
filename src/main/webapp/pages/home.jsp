@@ -8,7 +8,9 @@
 </head>
 <body>
 
-<h1>Welcome to Spring Boot Web App ${myname}</h1> 
+<h1>Welcome to Spring Boot Web App</h1> <br> 
+
+${obj.sid} <br> ${obj.sname} <br> ${obj.stech}
 
 </body>
 </html>
