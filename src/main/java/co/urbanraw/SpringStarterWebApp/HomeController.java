@@ -10,7 +10,7 @@ public class HomeController {
 	public String home()
 	{
 		//System.out.println("Hi, From Home..");
-		return "home.jsp";// Imported the tomcat japser dependency inorder to work this.
+		return "home";
 	}
 
 }
