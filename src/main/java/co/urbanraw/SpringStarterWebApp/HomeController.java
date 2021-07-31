@@ -7,12 +7,13 @@ import javax.servlet.http.HttpSession;
 import org.springframework.boot.web.servlet.server.Session;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
 public class HomeController {
 	
 	@RequestMapping("home")
-	public String home(String myName, HttpSession session)
+	public String home(@RequestParam("name") String myName, HttpSession session)
 	{
 		session.setAttribute("myname", myName);
 	
