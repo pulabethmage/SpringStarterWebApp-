@@ -12,16 +12,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class HomeController {
 	
 	@RequestMapping("home")
-	public String home(HttpServletRequest req)
+	public String home(String myName, HttpSession session)
 	{
-		
-		HttpSession session = req.getSession();
-		
-		//System.out.println("Hi, From Home..");
-		String name = req.getParameter("name");
-		session.setAttribute("myname", name);
+		session.setAttribute("myname", myName);
 	
-		return "home";// Imported the tomcat japser dependency inorder to work this.
+		return "home";
 	}
 
 }
